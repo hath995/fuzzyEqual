@@ -42,6 +42,9 @@ function compare_arrays(lhs, rhs) {
     if(length === matching) {
       deep_equal = true;
     }
+  }else if(lhs.length === rhs.length && length === 0){
+    similarity = 1;
+    deep_equal = true;
   }
   return {
     matching_types: true,
@@ -92,6 +95,9 @@ function compare_objects(lhs,rhs) {
     if(total_properties === matching) {
       deep_equal = true;
     }
+  }else if(total_properties === 0) {
+    similarity = 1;
+    deep_equal = true;
   }
   return {
     matching_types: true,
@@ -100,6 +106,7 @@ function compare_objects(lhs,rhs) {
     similarity: similarity,
     deep_equal: deep_equal,
     differing_properties: differing_props,
+    matching_properties: matching_props,
     left_only: leftside_props,
     right_only: rightside_props
   }

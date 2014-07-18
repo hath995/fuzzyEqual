@@ -42,12 +42,14 @@ describe("Fuzzy Equal",function() {
   it("should compare arrays and show deep equals",function(){
     fuzzyEqual(samplearray,[1,2,3,4,5]).deep_equal.should.be.true;
     fuzzyEqual(samplearray,[1,2,3,4]).deep_equal.should.be.false;
+    fuzzyEqual([],[]).deep_equal.should.be.true;
   });
 
   it("should compare objects and show deep equals",function() {
     fuzzyEqual(sampleobject,{a:1,b:2}).deep_equal.should.be.true;
     fuzzyEqual({b:1},{c:1}).deep_equal.should.be.false;
     fuzzyEqual({a:1},{a:1,b:1}).deep_equal.should.be.false;
+    fuzzyEqual({},{}).deep_equal.should.be.true;
   });
 
   it("should compare arrays and objects recursively",function(){
