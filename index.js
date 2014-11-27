@@ -63,6 +63,7 @@ function compare_objects(lhs,rhs) {
   var leftside_props = [];
   var rightside_props = [];
   var differing_props = [];
+  var deep_differences = {};
   var deep_equal = false;
   for(var prop in lhs) {
       total_properties++;
@@ -73,6 +74,7 @@ function compare_objects(lhs,rhs) {
           matching++;
         }else{
           differing_props.push[prop];
+          deep_differences[prop] = comparison;
         }
       }else{
         leftside_props.push(prop);
@@ -107,6 +109,7 @@ function compare_objects(lhs,rhs) {
     deep_equal: deep_equal,
     differing_properties: differing_props,
     matching_properties: matching_props,
+    deep_differences: deep_differences,
     left_only: leftside_props,
     right_only: rightside_props
   }
