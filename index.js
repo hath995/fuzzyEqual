@@ -108,7 +108,7 @@ function compare_objects(lhs,rhs) {
     similarity: similarity,
     deep_equal: deep_equal,
     differing_properties: differing_props,
-    matching_properties: matching_props,
+    common_properties: matching_props,
     deep_differences: deep_differences,
     left_only: leftside_props,
     right_only: rightside_props
@@ -138,12 +138,9 @@ function fuzzyEqual(lhs, rhs) {
       }else{
         return compare_objects(lhs, rhs); 
       }
-    }else{
-      return constants.TYPE_MISMATCH; 
     }
-  }else{
-    return constants.TYPE_MISMATCH; 
   }
+  return constants.TYPE_MISMATCH; 
 }
 
 module.exports = fuzzyEqual;

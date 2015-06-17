@@ -1,7 +1,8 @@
 {
   "name": "fuzzy-equal",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Compare objects and give an percentage of similarity",
+  "repository": "hath995/fuzzyEqual"
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,9 +11,14 @@
     "fuzzy",
     "equal",
     "object",
-    "comparison"
+    "comparison",
+    "deep",
+    "compare",
+    "equality",
+    "percentage",
+    "percent"
   ],
-  "author": "Aaron Elligsen",
+  "author": "Aaron Elligsen <http://github.com/hath995>)",
   "license": "MIT",
   "devDependencies": {
     "mocha": "~1.20.1",
