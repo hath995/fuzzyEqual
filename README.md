@@ -3,7 +3,7 @@ A function to deeply compare values and produce a naive percentage of similarity
 
 ### Example
 ```JavaScript
-var fuzzyEqual = require('fuzzyEqual');
+var fuzzyEqual = require('fuzzy-equal');
 
 var expectation = {
     a: 1,
