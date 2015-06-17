@@ -1,5 +1,5 @@
 {
-  "name": "fuzzy-equal",
+  "name": "fuzzyEqual",
   "version": "1.0.0",
   "description": "Compare objects and give an percentage of similarity",
   "repository": "hath995/fuzzyEqual"
