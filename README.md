@@ -3,7 +3,7 @@ A function to deeply compare values and produce a naive percentage of similarity
 
 ### Example
 ```JavaScript
-var fuzzyEqual = require('fuzzy-equal');
+var fuzzyEqual = require('fuzzyEqual');
 
 var expectation = {
     a: 1,
@@ -51,8 +51,8 @@ interface Comparison {
     property_count?: number, //total number of keys in an object, or length for an array
     matching?: number,       //number of deep equal properties between the two values
     differing_properties?: string[], //list of keys of properties that differed 
-    common_properties?: {[index: string]: boolean}   //object containing keys of shared properties
-    deep_differences?: {[index: string]: Comparison} //the comparison object generated for each differing property
+    common_properties?: {[index: string]: boolean},   //object containing keys of shared properties
+    deep_differences?: {[index: string]: Comparison}, //the comparison object generated for each differing property
     left_only?: string[],    //keys which only appear in the left object
     right_only?: string[]    //keys which only appear in the right object
 }
