@@ -54,6 +54,6 @@ interface Comparison {
     common_properties?: {[index: string]: boolean},   //object containing keys of shared properties
     deep_differences?: {[index: string]: Comparison}, //the comparison object generated for each differing property
     left_only?: string[],    //keys which only appear in the left object
-    right_only?: string[]    //keys which only appear in the right object
+    right_only?: string[],    //keys which only appear in the right object
 }
 ```
