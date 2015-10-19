@@ -37,14 +37,14 @@ function compare_arrays(lhs, rhs) {
     }
   }
   var similarity = 0;
-  if(length > 0) {
+  if(lhs.length === rhs.length && length === 0){
+    similarity = 1;
+    deep_equal = true;
+  } else {
     similarity = matching/length;
     if(length === matching) {
       deep_equal = true;
     }
-  }else if(lhs.length === rhs.length && length === 0){
-    similarity = 1;
-    deep_equal = true;
   }
   return {
     matching_types: true,
@@ -92,15 +92,16 @@ function compare_objects(lhs,rhs) {
     }
   }
 
-  if(total_properties > 0 ) {
+  if(total_properties === 0) {
+    similarity = 1;
+    deep_equal = true;
+  } else {
     similarity = matching/total_properties;
     if(total_properties === matching) {
       deep_equal = true;
     }
-  }else if(total_properties === 0) {
-    similarity = 1;
-    deep_equal = true;
   }
+
   return {
     matching_types: true,
     property_count: total_properties,

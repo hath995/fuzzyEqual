@@ -50,6 +50,8 @@ describe("Fuzzy Equal",function() {
     fuzzyEqual({b:1},{c:1}).deep_equal.should.be.false;
     fuzzyEqual({a:1},{a:1,b:1}).deep_equal.should.be.false;
     fuzzyEqual({},{}).deep_equal.should.be.true;
+
+    fuzzyEqual({a: 1}, {a: "1"}).deep_equal.should.be.false;
   });
 
   it("should compare arrays and objects recursively",function(){
@@ -64,6 +66,7 @@ describe("Fuzzy Equal",function() {
     fuzzyEqual(samplenumber, null).matching_types.should.be.false;
     fuzzyEqual(samplestring, null).matching_types.should.be.false;
     fuzzyEqual(samplearray,  null).matching_types.should.be.false;
+    fuzzyEqual(null,  null).matching_types.should.be.true;
   });
 
   it("should compare things to undefined correctly", function() {
