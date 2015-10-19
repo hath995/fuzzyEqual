@@ -1,4 +1,5 @@
 [![Circle CI](https://circleci.com/gh/hath995/fuzzyEqual/tree/master.svg?style=shield)](https://circleci.com/gh/hath995/fuzzyEqual/tree/master)
+[![codecov.io](https://codecov.io/github/hath995/fuzzyEqual/coverage.svg?branch=master)](https://codecov.io/github/hath995/fuzzyEqual?branch=master)
 #Fuzzy-Equals
 A function to deeply compare values and produce a naive percentage of similarity and other metrics to analyze the difference between them. The notion of equality in this library is defined as exact type, value, and structural equality. 
 
