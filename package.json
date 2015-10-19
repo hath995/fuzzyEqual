@@ -1,11 +1,11 @@
 {
   "name": "fuzzy-equal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Compare objects and give an percentage of similarity",
   "repository": "hath995/fuzzyEqual",
   "main": "index.js",
   "scripts": {
-    "test": "./tests/"
+    "test": "mocha test/"
   },
   "keywords": [
     "fuzzy",
