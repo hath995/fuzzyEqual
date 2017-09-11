@@ -1,0 +1,5 @@
+codecov:
+  branch: master
+parsers:
+  javascript:
+    enable_partials: yes
